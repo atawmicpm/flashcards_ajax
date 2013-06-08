@@ -28,15 +28,15 @@ post '/game' do
   correct = 0
 
   if card.correct?(params[:answer])
-  	user.rounds.last.correct += 1
+  	user.rounds.last.increment('correct').save
   	correct = 1
   else
-  	user.rounds.last.incorrect += 1
+  	user.rounds.last.increment('incorrect').save
   end
 
   card = user.rounds.last.cards.first
 
-  [correct, card.question, card.id].to_json
+  [correct, card.question, card.id, card.answer].to_json
 end
                                                                                                                                                                                                                                                                                                                                   
 

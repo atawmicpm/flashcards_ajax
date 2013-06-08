@@ -9,7 +9,7 @@ $(document).ready(function() {
        data: $('form').serialize()
      }).done(function(data){
           console.log(data);
-          $('#answer').html(data[0]);
+          $('#answer').html(data[3]);
           $('#question').html(data[1]);
           $('input[id=card_id]').val(data[2]);
           $('input[name=answer]').val('')
