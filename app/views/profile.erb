@@ -1,2 +1,17 @@
-Ready to learn?
-<%=@cards%>
+<div class="container">
+<h1>Welcome, <%=current_user.name%></h1>
+<h3>Some game stats!</h3>
+  <div id="topics">
+  <h3>Game Topic Options</h3>
+    <ul>
+      <%@decks.each do |deck|%>
+      <li><a href="/game/<%=deck.id%>"><%=deck.topic%></a></li>
+      <%end%>
+    </ul>
+
+
+    <a class="logout" href="/logout">Logout</a>
+    <a class="profile" href="/profile/<%=current_user.id%>">Profile</a>
+  </div>
+</div>
+

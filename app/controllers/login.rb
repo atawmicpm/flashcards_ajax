@@ -14,6 +14,7 @@ post '/login' do
   user = User.find_by_email(params[:email])
   if user.check_password(params[:password_digest])
     session[:user_id] = user.id
+    @decks = Deck.all
     erb :profile
   else
     erb :index

@@ -17,19 +17,19 @@ $(document).ready(function() {
    });
 
 
-  $('#login_form').on('click', function(e){
-     e.preventDefault();
+  // $('#login_form').on('click', function(e){
+  //    e.preventDefault();
      
-     $.ajax({
-       url: '/login',
-       method: 'post',
-       data: $(this).serialize()
-     }).done(function(data){
-          console.log(data)
-          $('#new_user_form').hide();
-          $('#profile').html(data);
-     });
-   });
+  //    $.ajax({
+  //      url: '/login',
+  //      method: 'post',
+  //      data: $(this).serialize()
+  //    }).done(function(data){
+  //         console.log(data)
+  //         $('#new_user_form').hide();
+  //         $('#profile').html(data);
+  //    });
+  //  });
 
 
 }); // closes ready

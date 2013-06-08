@@ -5,10 +5,25 @@
 
 #topic = Deck.create(topic: 'Ruby')
 
+# lines_array = File.readlines('ruby_cards.txt',"\n\n").map { |a| a.split("\n") }
+# lines_array.collect { |pair| Card.create(question: pair[0], answer: pair[1], deck_id: 1)}
+
+require 'csv'
+system("pwd")
+topic = Deck.create(topic: "Ruby")
+
 lines_array = File.readlines('ruby_cards.txt',"\n\n").map { |a| a.split("\n") }
 lines_array.collect { |pair| Card.create(question: pair[0], answer: pair[1], deck_id: 1)}
 
+periodic = Deck.create(topic: "Periodic Table")
+CSV.foreach('periodictable.csv', headers:true) do |data|
+  Card.create(question: data[1], answer: data[0], deck_id: 2)
+end
 
+capitals = Deck.create(topic: "World Capitals")
+CSV.foreach('worldcapitals.csv', headers:true) do |data|
+  Card.create(question: data[0], answer: data[1], deck_id: 3)
+end
 
 # phillip = User.find(1)
 

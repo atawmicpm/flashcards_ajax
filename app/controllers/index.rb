@@ -2,10 +2,16 @@ enable :sessions
 
 get '/' do
   if session[:user_id]
+    @decks = Deck.all
     erb :profile
   else
     erb :index
   end
+end
+
+get '/profile/:id' do |id|
+  @decks = Deck.all
+  erb :profile
 end
 
 get '/game/:topic_id' do |topic_id|
