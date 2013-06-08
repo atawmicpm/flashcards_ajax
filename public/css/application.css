@@ -1,49 +1,202 @@
 body {
-  font-family: 'Della Respira', serif;
+  font-family: Gotham, serif;
 }
 
-/*#answer {
-  color: red;
-}
-*/
 .container {
   margin: 20px auto;
-  width: 600px;
+  width: 1000px;
+  height: 100%;
+  background-color: #fff;
   padding: 0px 20px 20px 20px;
 }
+
 th {
   text-align: left;
 }
 
 header {
-  background-color: #67bf95;
+  background-color: #666;
   height: 75px;
   box-shadow: 0px 0px 7px #888888
-
 }
 
-form {
+header form {
     float: right;
-
+    width: 55%;
 }
 
 header form input {
-    float: right;
-    display: inline;
-    margin: 0px 40px 0px 0px;
+  float: right;
+  display: inline;
+  margin: 15px 26px 0px 0px;
+  height: 38px;
+  width: 165px;
+  border: 0px solid;
+  padding: 4px 0px 0px 19px;
+}
 
+header form input:focus {
+  outline: 0;
+  border: none
 }
 
 #sweet_button {
-  font-family: 'Della Respira', serif;
   width: 100px;
-  height: 40px;
-  background-color: ##bfc9ca;
-  transition: background-color 0.2s ease-in;
-  -webkit-transition: background 0.2s ease-in;
-  border: none;  
+  height: 43px;
+  margin: 14px 30px 10px 9px;
+  background-color: #bfc9ca;
+  padding-right: 19px;
+  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  border: none;
+  color: #666;
+}
+
+#clear_space {
+  width: 100%;
+  height: 100px;
+}
+
+header form input .clear:before, .clear:after{
+    content:"";
+    display:table;
+}
+ 
+header form input .clear:after{
+    clear:both;
 }
 
 #sweet_button:hover {
+  color: #363636;
   background-color: #fff
+}
+
+#logo {
+  float: left;
+  width: 300px;
+  height: 75px;
+  background-color: #DE6868;
+  margin: 119px 0px 0px 329px
+}
+
+.container {
+  background: url("/../image/journey.jpg") no-repeat;
+
+}
+
+#section1 {
+  margin-top: -19px;
+  background-color: #d9d9d9;
+  width: 100%;
+  height: 1000px;
+}
+
+#logo p {
+  color: #fff;
+  text-align: center;
+  padding-top: 4px;
+  font-size: 21px;
+  font-weight: 200;
+}
+
+/*<signup button>*/
+
+.button-wrapper {
+  float: left;
+  width: 100%
+}
+
+.path{
+  background: #888888;
+  margin: 61px 0px 0px 327px;
+  padding-left: 20px;
+  padding-right: 80px;
+  height: 38px;
+  display: inline-block;
+  position: relative;
+  box-shadow: 0px 1px 1px #888888;
+  float: left;
+  clear: both;
+  text-decoration: none;
+  overflow: hidden;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.path-text{
+  padding-top: 10px;
+  padding-left: 18px;
+  display: block;
+  font-size: 18px;
+  color: #EBEBEB;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.path-slide-text{
+    position: absolute;
+    height: 91%;
+    margin-top: 2px;
+    top: 0px;
+    right: 52px;
+    width: 0px;
+    background: #666;
+    text-shadow: 0px -1px 1px #363f49;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    text-align: left;
+    text-indent: 10px;
+    overflow: hidden;
+    line-height: 38px;
+    box-shadow: 0px 0px 1px #666;
+    -webkit-transition: width 0.3s linear;
+    transition: width 0.3s linear;
+  }
+.path-icon-right{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    width: 52px;
+    border-left: 1px solid #666;
+    -webkit-box-shadow: 1px 0px 1px rgba(255,255,255,0.4) inset;
+    box-shadow: 1px 0px 1px rgba(255,255,255,0.4) inset;
+}
+.path-icon-right span{
+  width: 38px;
+  height: 38px;
+  opacity: 0.7;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -11px 0px 0px -10px;
+  background: url("/../image/arrow_right.png") no-repeat;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.path:hover{
+    padding-right:180px;
+    -webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2);
+    -moz-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2);
+    box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2);
+}
+.path:hover .path-text{
+    text-shadow:0px 1px 1px #5d81ab;
+    color:#fff;
+}
+.path:hover .path-slide-text{
+    width:100px;
+}
+.path:hover .path-icon-right span{
+    opacity:1;
+}
+.path:active{
+    position:relative;
+    top:1px;
+    background:#DE6868;
+    -webkit-box-shadow:1px 1px 2px rgba(0,0,0,0.4) inset;
+    -moz-box-shadow:1px 1px 2px rgba(0,0,0,0.4) inset;
+    box-shadow:1px 1px 2px rgba(0,0,0,0.4) inset;
+    border-color:#80a9da;
 }
