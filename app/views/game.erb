@@ -2,7 +2,7 @@
   <header>
       <form id="login_form" class="clear" method="Get" action="/logout">
       <input class="profile" id="sweet_button" value="logout" type="submit" action="submit"> 
-      <img id="gravatar" src="<%= @gravatar %>"></img>
+      <img id="gravatar" src="<%= gravatar_url(current_user.email) %>"></img>
     </form>
    
      <form class="clear" method="Get" action="/profile/<%=current_user.id%>">

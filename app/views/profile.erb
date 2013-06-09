@@ -2,7 +2,7 @@
   <header>
     <form id="login_form" class="clear" method="Get" action="/logout">
       <input id="sweet_button" value="logout" type="submit" action="submit"> 
-      <img id="gravatar" src="<%= @gravatar %>"></img>
+      <img id="gravatar" src="<%= gravatar_url(current_user.email) %>"></img>
     </form>
   </header>
 </section>
@@ -13,16 +13,16 @@
   <div id="topics">
     <h3>Select Your Deck</h3>
     <ul>
-      <%@decks.each do |deck|%>
+      <%Deck.all.each do |deck|%>
       <li><a href="/game/<%=deck.id%>"><%=deck.topic%></a></li>
       <%end%>
     </ul>
 
     <h3>Your Game Stats!</h3>
-    <% i = 0 %>
+    <% i = 1 %>
     <%@rounds.each do |round|%>
-    <b>Round&nbsp;<%= i+1 %>:&nbsp;&nbsp;</b><%=@topics[i]%>&nbsp;
-    <%=round.correct%>/<%=round.incorrect + round.correct%><br>
+    
+    Round <%= i %>:&nbsp;<%= Deck.find(round.deck_id).topic %> <%=round.correct%>/<%=round.incorrect + round.correct%><br>
     <% i+=1 %>
     <%end%>
 

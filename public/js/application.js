@@ -10,11 +10,11 @@ $(document).ready(function() {
      }).done(function(data){
           console.log(data);
           if (data[0] === "redirect") {
-            window.location.href = "/";
+            window.location.href = '/';
           } else {
-            $('#answer').html(data[3]);
-            $('#question').html(data[1]);
-            $('input[id=card_id]').val(data[2]);
+            $('#answer').html(data[2]);
+            $('#question').html(data[0]);
+            $('input[id=card_id]').val(data[1]);
             $('input[name=answer]').val('');
         }
      });
