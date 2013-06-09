@@ -1,0 +1,26 @@
+<section>
+  <header>
+    <form id="login_form" class="clear" method="Get" action="/logout">
+      <input id="sweet_button" value="logout" type="submit" action="submit"> 
+      <img id="gravatar" src="<%= gravatar_url(current_user.email) %>"></img>
+    </form>
+  </header>
+</section>
+
+<div class="container">
+  <h3>Please name your deck...</h3>
+  <form id="create_deck" method="POST" action="/deck/create">
+    <input type="text" name="topic" placeholder="Topic"/>
+    <br>
+    <fieldset id="questions">
+      <input type="text" name="questions[][answer]" placeholder="Question" />
+      <input type="text" name="questions[][question]" placeholder="Answer" /><br />
+
+    </fieldset>
+
+    <button class="add">Add another question!</button>
+    <input value='submit' type='submit'>
+  </form>
+</div>
+<div class="footer"></div> 
+</div>

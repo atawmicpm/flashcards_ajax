@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
 	has_many :guesses, :through => :rounds
   # Remember to create a migration!
 
-    validates :email, :uniqueness => true
+  validates :email, :uniqueness => true
   validates :email, :password, :name, :presence => true
   # Remember to create a migration!
 

@@ -1,0 +1,23 @@
+<section>
+  <header>
+      <form id="login_form" class="clear" method="Get" action="/logout">
+      <input class="profile" id="sweet_button" value="logout" type="submit" action="submit"> 
+      <img id="gravatar" src="<%= gravatar_url(current_user.email) %>"></img>
+    </form>
+   
+     <form class="clear" method="Get" action="/profile/<%=current_user.id%>">
+      <input class="profile" id="sweet_button" value="profile" type="submit" action="submit"> 
+    </form>
+  </header>
+</section>
+
+
+<div id="view-deck" class="container">
+  <h3><%=@topic%></h3><br>
+  <%@deck.each do |card|%>
+    <%=card.question%><br>
+    <%=card.answer%><br><br>
+   <%end%> 
+</div>
+  <div class="footer"></div> 
+</div>
