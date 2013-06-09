@@ -1,17 +1,33 @@
-<div class="container">
-<h1>Welcome, <%=current_user.name%></h1>
-<h3>Some game stats!</h3>
+<section>
+  <header>
+    <form id="login_form" class="clear" method="Get" action="/logout">
+      <input id="sweet_button" value="logout" type="submit" action="submit"> 
+      <img id="gravatar" src="<%= @gravatar %>"></img>
+    </form>
+  </header>
+</section>
+
+
+<div id="profile" class="container">
+  <h1>Welcome, <%=current_user.name%></h1>
   <div id="topics">
-  <h3>Game Topic Options</h3>
+    <h3>Select Your Deck</h3>
     <ul>
       <%@decks.each do |deck|%>
       <li><a href="/game/<%=deck.id%>"><%=deck.topic%></a></li>
       <%end%>
     </ul>
 
+    <h3>Your Game Stats!</h3>
+    <% i = 0 %>
+    <%@rounds.each do |round|%>
+    <%=@topics[i]%>
+    <%=round.id%>:&nbsp;<%=round.correct%>/<%=round.incorrect + round.correct%><br>
+    <% i+=1 %>
+    <%end%>
 
-    <a class="logout" href="/logout">Logout</a>
-    <a class="profile" href="/profile/<%=current_user.id%>">Profile</a>
   </div>
+  <div class="footer"></div> 
 </div>
+
 
