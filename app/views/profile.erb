@@ -21,8 +21,8 @@
     <h3>Your Game Stats!</h3>
     <% i = 0 %>
     <%@rounds.each do |round|%>
-    <%=@topics[i]%>
-    <%=round.id%>:&nbsp;<%=round.correct%>/<%=round.incorrect + round.correct%><br>
+    <b>Round&nbsp;<%= i+1 %>:&nbsp;&nbsp;</b><%=@topics[i]%>&nbsp;
+    <%=round.correct%>/<%=round.incorrect + round.correct%><br>
     <% i+=1 %>
     <%end%>
 

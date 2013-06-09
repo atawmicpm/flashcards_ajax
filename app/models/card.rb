@@ -7,6 +7,4 @@ class Card < ActiveRecord::Base
   def correct?(user_guess)
     user_guess == self.answer
   end
-
-  # Remember to create a migration!
 end

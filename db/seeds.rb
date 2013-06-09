@@ -25,6 +25,8 @@ CSV.foreach('worldcapitals.csv', headers:true) do |data|
   Card.create(question: data[0], answer: data[1], deck_id: 3)
 end
 
+User.create(name: "Paulette Luftig", email: "pyluftig@gmail.com", password: "123")
+
 # phillip = User.find(1)
 
 # phillip.rounds << Round.new

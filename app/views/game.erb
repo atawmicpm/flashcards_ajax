@@ -1,15 +1,13 @@
 <section>
   <header>
       <form id="login_form" class="clear" method="Get" action="/logout">
-      <input id="sweet_button" value="logout" type="submit" action="submit"> 
+      <input class="profile" id="sweet_button" value="logout" type="submit" action="submit"> 
       <img id="gravatar" src="<%= @gravatar %>"></img>
     </form>
    
-     <form class="profile" class="clear" method="Get" action="/profile/<%=current_user.id%>">
-      <input id="sweet_button" value="profile" type="submit" action="submit"> 
+     <form class="clear" method="Get" action="/profile/<%=current_user.id%>">
+      <input class="profile" id="sweet_button" value="profile" type="submit" action="submit"> 
     </form>
-
-    
   </header>
 </section>
 

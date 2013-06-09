@@ -33,6 +33,11 @@ body {
   margin-top: 5px;
 }
 
+.profile {
+  float: right;
+  position: relative;
+}
+
 th {
   text-align: left;
 }

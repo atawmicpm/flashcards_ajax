@@ -11,7 +11,7 @@ get '/logout' do
 end
 
 post '/login' do 
-  
+
   user = User.find_by_email(params[:email])
   if user.check_password(params[:password_digest])
     session[:user_id] = user.id
@@ -21,9 +21,11 @@ post '/login' do
     @topics = []
 
     @rounds.each do |round|
-      card_id = round.guesses.last.card_id
-      id = Card.find(card_id).deck_id
-      @topics << Deck.find(id).topic
+      if round.guesses.length > 0
+        card_id = round.guesses.last.card_id
+        id = Card.find(card_id).deck_id
+        @topics << Deck.find(id).topic
+      end
     end
     @decks = Deck.all
     erb :profile
