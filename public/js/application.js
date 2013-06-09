@@ -18,22 +18,12 @@ $(document).ready(function() {
             $('input[name=answer]').val('');
         }
      });
-   });
-
-
-  // $('#login_form').on('click', function(e){
-  //    e.preventDefault();
+     $('#card').addClass('flipped').delay(800);
      
-  //    $.ajax({
-  //      url: '/login',
-  //      method: 'post',
-  //      data: $(this).serialize()
-  //    }).done(function(data){
-  //         console.log(data)
-  //         $('#new_user_form').hide();
-  //         $('#profile').html(data);
-  //    });
-  //  });
-
+      setTimeout(function(){
+        $('#card').removeClass('flipped');
+      }, 2500);
+     
+   });
 
 }); // closes ready

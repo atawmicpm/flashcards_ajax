@@ -11,16 +11,21 @@
   </header>
 </section>
 
-<div class="container">
-  <div id="answer"></div><br><br>
 
-  <div id="question"><%=@card.question%></div>
+<div id="container">
+<section class="cardcontainer">
+  <div id="card">
+  <figure class="front" id="question"><%=@card.question%></figure>
+  <figure class="back" id="answer"></figure>
+</div>
+</section>
+
   <form id="game" method="Post" action="/game">
     <input id="card_id" type="hidden" name="card_id" value="<%=@card.id%>"></br>
     <input type="text" name="answer" placeholder="Your Answer"></br>
     <button id="gamesubmit" action="submit">Guess</button>
   </form>
-
+</div>
   <div class="footer"></div>
 
-</div>
+
