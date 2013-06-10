@@ -1,0 +1,32 @@
+<section>
+  <header>
+    <form id="login_form" class="clear" method="Get" action="/logout">
+      <input id="sweet_button" value="logout" type="submit" action="submit"> 
+      <img id="gravatar" src="<%= gravatar_url(current_user.email) %>"></img>
+    </form>
+  </header>
+
+      <form class="clear" method="Get" action="/profile/<%=current_user.id%>">
+      <input class="profile" id="sweet_button" value="profile" type="submit" action="submit"> 
+    </form>
+  </header>
+</section>
+
+
+<div class="container">
+
+
+<form name="update_deck_of_cards" action="/update/deck/<%=@deck.id%>" method="post">
+    <input type="text" name="topic" value="<%=@deck.topic%>" placeholder="Topic"/><a href="/delete/deck/<%=@deck.id%>">Delete this Deck</a><br>
+
+    <%@cards.each do |card|%>
+    <fieldset id="questions">
+    	
+      <textarea name="questions[][answer]" cols="50" rows="3"><%=card.question%></textarea>
+      <input type="text" name="questions[][question]" value="<%=card.answer%>"  /><a href="/delete/card/<%=card.id%>">Delete this card</a>
+    </fieldset>
+    <input class="button" type="submit" value="Update All">
+	</form>
+<%end%>
+</div>
+

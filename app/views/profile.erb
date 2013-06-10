@@ -14,7 +14,7 @@
     <h3>Select Your Deck</h3>
     <ul>
       <%Deck.all.each do |deck|%>
-      <li><a href="/game/<%=deck.id%>"><%=deck.topic%></a><a style="float: right; margin-right: 400px;" href="/deck/<%=deck.id%>">View <%=deck.topic%> Deck</a></li>
+      <li><a href="/game/<%=deck.id%>"><%=deck.topic%></a><br><a style="float: right; margin-right: 400px;" href="/deck/<%=deck.id%>">View <%=deck.topic%> Deck</a><a href="/update/deck/<%=deck.id%>">Update</a></li><br>
       <%end%>
     </ul>
 
