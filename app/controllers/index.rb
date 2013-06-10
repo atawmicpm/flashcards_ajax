@@ -19,7 +19,6 @@ post '/game' do
   content_type 'json'
   Round.answer_and_next_card(session[:user_id], params[:answer]).to_json
 end
-                                                                                                                                                                                                                                                                                                                                  
 
 
 

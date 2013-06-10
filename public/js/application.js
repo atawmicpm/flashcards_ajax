@@ -44,16 +44,15 @@ $(document).ready(function() {
 
   var rotateThrough = function() {}
   var opacityOff = 0;
-  var delay = 5000;
   function eachDiv(){
-  var count = $("#quote_box li").length -1;
+  var quoteCount = $("#quote_box li").length -1;
    $("#quote_box li:eq(" + opacityOff + ")")
-      .animate({"opacity" : "1"} ,1000)
-      .animate({"opacity" : "1"}, delay)
+      .animate({"opacity" : "1"}, 1000)
+      .animate({"opacity" : "1"}, 5000)
       .animate({"opacity" : "0"}, 1000, function(){
-        (opacityOff == count) ? opacityOff=0 : opacityOff++;
+        (opacityOff == quoteCount) ? opacityOff=0 : opacityOff++;
          eachDiv();
       });
    };
    eachDiv();
-}); // closes ready
+}); 

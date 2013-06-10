@@ -65,10 +65,15 @@ header {
   left: 0;
 }
 
+.header_box  {
+  margin: 0px auto;
+  width: 1000px;
+  height: 100%;
+}
+
 #login_form {
   position: absolute;
-  margin: 15px 0px 0px 726px;
-  width: 46%;
+  margin: 15px 0px 0px 498px;
   display: none;
 }
 
@@ -101,9 +106,9 @@ header form input:focus {
 
 #exisiting {
   position: absolute;
-  width: 150px;
+  width: 170px;
   height: 30px;
-  margin: 16px 0px 0px 972px;
+  margin: 16px 0px 0px 753px;
   background-color: #bfc9ca;
   padding: 14px 1px 0px 15px;
   transition: all 0.2s ease-in;
@@ -170,7 +175,7 @@ header form input .clear:after{
 
 .path{
   background: #888888;
-  margin: 61px 0px 0px 327px;
+  margin: 61px 0px 0px 328px;
   padding-left: 20px;
   padding-right: 80px;
   height: 38px;
@@ -323,10 +328,9 @@ header form input .clear:after{
 
 #quote_box {
   text-align: center;
-  top: 485px;
-  position: absolute;
-  /*overflow:hidden;*/
-  left: 269px;
+  float: left;
+  width: 100%;
+  margin: 56px 0px 0px 24px;
   color: #666;
 }
 
