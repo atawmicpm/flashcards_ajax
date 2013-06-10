@@ -14,17 +14,26 @@
     <h3>Select Your Deck</h3>
     <ul>
       <%Deck.all.each do |deck|%>
-      <li><a href="/game/<%=deck.id%>"><%=deck.topic%></a></li>
+      <li><a href="/game/<%=deck.id%>"><%=deck.topic%></a><a style="float: right; margin-right: 400px;" href="/deck/<%=deck.id%>">View <%=deck.topic%> Deck</a></li>
       <%end%>
     </ul>
 
     <h3>Your Game Stats!</h3>
     <% i = 1 %>
     <%@rounds.each do |round|%>
-    
+    <%if round%>
     Round <%= i %>:&nbsp;<%= Deck.find(round.deck_id).topic %> <%=round.correct%>/<%=round.incorrect + round.correct%><br>
     <% i+=1 %>
     <%end%>
+    <%end%><br><br>
+
+    
+    <div>
+      <form id="deck" class="clear" method="Get" action="/deck/create">
+        <input id="create-button" value="Create Your Own Deck!" type="submit" action="submit">
+      </form>
+    </div>
+
 
   </div>
   <div class="footer"></div> 
