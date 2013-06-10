@@ -1,40 +1,51 @@
 <section>
   <header>
     <form id="login_form" class="clear" method="Post" action="/login">
-      <input type="password" name="password_digest" placeholder="Password..">
-      <input type="email" name="email" placeholder="Email..">
-      <input id="sweet_button" value="login" type="submit" action="submit"> 
+      <input id="sweet_button" value="login" type="submit" action="submit">
+      <input id="email_box" type="email" name="email" placeholder="Email..">
+      <input id="pass_box" type="password" name="password_digest" placeholder="Password..">
     </form>
+    <div id="exisiting">Existing Scholars</div>
+    
   </header>
 </section>
 
 <section id="section1">
   <div class="container">
-    <div id="logo">
-      <p>Knowledge is a Journey</p>
-    </div>
-    <div class="content">
-      <div class="button-wrapper">
-        <a href="#" class="path">
-          <span class="path-text">Take Your First Step</span>
-          <span class="path-slide-text">Signup</span>
-          <span class="path-icon-right"><span></span></span>
-        </a>
-      </div>
-    </div>
-  </div>
 
-  <div class="signup_form">
-
-
+   <div class="signin_box">
     <div id="profile">
     </div>
-    <form id="new_user_form" method="Post" action="/users/new">
-      <input type="text" name="name" placeholder="Name.."></br>
-      <input type="email" name="email" placeholder="Email.."></br>
-      <input type="password" name="password_digest" placeholder="Password.."></br>
-      <input type="password" name="pass_conf" placeholder="Re-enter Password.."></br>
-      <input value="submit" type="submit"> 
+    <form class="new_user_form" method="Post" action="/users/new" >
+      <input type="text" name="name" placeholder="Name.." autocomplete="off"></br>
+      <input type="email" name="email" placeholder="Email.." autocomplete="off"></br>
+      <input type="password" name="password_digest" placeholder="Password.." autocomplete="off"></br>
+      <input type="password" name="pass_conf" placeholder="Re-enter Password.." autocomplete="off"></br>
+      <input value="submit" id="log_sub" type="submit">
     </form>
-    
   </div>
+  <div id="logo">
+    <p>Knowledge is a Journey</p>
+  </div>
+  <div class="content">
+    <div class="button-wrapper">
+      <a href="#" class="path">
+        <span class="path-text">Take Your First Step</span>
+        <span class="path-slide-text">Signup</span>
+        <span class="path-icon-right"><span></span></span>
+      </a>
+    </div>
+    <div id="quote_box">
+      <ul>
+        <li><p style class="quote">Education is the most powerful weapon which you can use to change the world.</p>
+          <p class="auth">Nelson Mandela</p></li>
+          <li><p class="quote">Education is the ability to listen to almost anything without losing your temper or your self-confidence.</p>
+            <p class="auth">Robert Frost</p></li>
+            <li><p class="quote">The roots of education are bitter, but the fruit is sweet.</p>
+              <p class="auth">Aristotle</p></li>
+              <li><p class="quote">The goal of education is the advancement of knowledge and the dissemination of truth.</p><p class="auth">John F. Kennedy </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>

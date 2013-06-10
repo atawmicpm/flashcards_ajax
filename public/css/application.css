@@ -1,10 +1,11 @@
 body {
   font-family: Gotham, serif;
+  background-color: #d9d9d9;
 }
 
 .container {
   margin: 20px auto;
-  width: 1000px;
+  width: 961px;
   height: 100%;
   background-color: #fff;
   padding: 0px 20px 20px 20px;
@@ -24,6 +25,10 @@ body {
 
 #topics a {
   text-decoration: none;
+}
+
+.hide {
+  display: none;
 }
 
 #gravatar {
@@ -58,19 +63,20 @@ header {
   left: 0;
 }
 
-header form {
-    float: right;
-    width: 55%;
+#login_form {
+  position: absolute;
+  margin: 15px 0px 0px 726px;
+  width: 46%;
+  display: none;
 }
 
+
 header form input {
-  float: right;
-  display: inline;
-  margin: 15px 26px 0px 0px;
   height: 38px;
-  width: 165px;
+  width: 165px;  
   border: 0px solid;
   padding: 4px 0px 0px 19px;
+  margin-right: 8px;
 }
 
 header form input:focus {
@@ -78,10 +84,11 @@ header form input:focus {
   border: none
 }
 
+
 #sweet_button {
   width: 100px;
   height: 43px;
-  margin: 14px 30px 10px 9px;
+  margin-right: 8px;
   background-color: #bfc9ca;
   padding-right: 19px;
   transition: all 0.2s ease-in;
@@ -89,6 +96,21 @@ header form input:focus {
   border: none;
   color: #666;
 }
+
+#exisiting {
+  position: absolute;
+  width: 150px;
+  height: 30px;
+  margin: 16px 0px 0px 972px;
+  background-color: #bfc9ca;
+  padding: 14px 1px 0px 15px;
+  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  border: none;
+  color: #666;
+}
+
+
 
 #clear_space {
   width: 100%;
@@ -104,9 +126,9 @@ header form input .clear:after{
     clear:both;
 }
 
-#sweet_button:hover {
+#sweet_button:hover, #exisiting:hover  {
   color: #363636;
-  background-color: #fff
+  background-color: #afafaf
 }
 
 #logo {
@@ -119,14 +141,14 @@ header form input .clear:after{
 
 .container {
   background: url("/../image/journey.jpg") no-repeat;
-
+  background-repeat:no-repeat;
 }
 
 #section1 {
-  margin-top: -19px;
+  margin-top: 65px;
   background-color: #d9d9d9;
   width: 100%;
-  height: 1000px;
+  height: 704px;
 }
 
 #logo p {
@@ -232,9 +254,89 @@ header form input .clear:after{
 .path:active{
     position:relative;
     top:1px;
-    background:#DE6868;
+    /*background:#DE6868;*/
     -webkit-box-shadow:1px 1px 2px rgba(0,0,0,0.4) inset;
     -moz-box-shadow:1px 1px 2px rgba(0,0,0,0.4) inset;
     box-shadow:1px 1px 2px rgba(0,0,0,0.4) inset;
     border-color:#80a9da;
 }
+
+/*signup box*/
+
+
+.signin_box {
+  background-color: #666;
+  position: absolute;
+  width: 277px;
+  z-index: 0;
+  border: 1px transparent;
+  text-align: left;
+  padding: 12px;
+  margin-top: 256px;
+  margin-left: 327px;
+  color: #789;
+  font-size: 11px;
+  opacity: 0;
+  /*display: none;  */
+}
+
+.box_open {
+  display: block;
+}
+
+.new_user_form input {
+  background-color: #666;
+  outline: none;
+  border: 0px;
+  width: 87%;
+  height: 37px;
+  font-size: 18px;
+  padding-left: 29px;
+}
+
+.new_user_form input:focus { 
+  color: #d9d9d9
+}
+
+
+
+#log_sub {
+  background: #DE6868;
+  width: 122px;
+  height: 29px;
+  margin: 16px 0px 12px 78px;
+  padding-right: 31px;
+  padding-top: 4px;
+  box-shadow: 0px 0px 1px #363636;
+  color: #F0F0F0;
+}
+
+#log_sub:hover{
+  opacity: 0.8;
+}
+
+#log_sub:active {
+  opacity: 0.5;
+}
+
+#quote_box {
+  text-align: center;
+  top: 485px;
+  position: absolute;
+  /*overflow:hidden;*/
+  left: 269px;
+  color: #666;
+}
+
+#quote_box li   {
+  background-color: rgba(255, 255, 255, .2);
+  padding: 1px 10px;
+  width: 807px;
+  list-style:  none;
+  position: absolute;
+  opacity:0
+}
+
+ul#cyclelist {width:200px;border:solid;position:relative;overflow:hidden;height:200px}
+ul#cyclelist li {font-size:1.4em;padding:20px;opacity:0;position:absolute}
+

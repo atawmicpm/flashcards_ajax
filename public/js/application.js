@@ -1,8 +1,6 @@
 $(document).ready(function() {
-  
   $('#gamesubmit').on('click', function(e){
      e.preventDefault();
-     
      $.ajax({
        url: '/game',
        method: 'post',
@@ -19,11 +17,43 @@ $(document).ready(function() {
         }
      });
      $('#card').addClass('flipped').delay(800);
-     
       setTimeout(function(){
         $('#card').removeClass('flipped');
       }, 2500);
-     
    });
 
+  $('#exisiting').on('click', function(){
+    $('#exisiting').fadeOut('fast', function(){
+      $('#login_form').fadeIn('slow');
+    });
+  });
+
+  var moveSignup = function(){
+    $(".signin_box")
+      .animate({ 'margin-top':'119px' }, {"queue": false, "duration": 800} )
+      .animate({ opacity : 1 }, 800);
+  };
+
+  $(".button-wrapper").click(function(e) {
+    e.preventDefault();
+    $('#logo').fadeOut('slow');
+    $('#quote_box').fadeOut('slow');
+    $('.button-wrapper').fadeOut('slow', moveSignup);
+
+  });
+
+  var rotateThrough = function() {}
+  var opacityOff = 0;
+  var delay = 5000;
+  function eachDiv(){
+  var count = $("#quote_box li").length -1;
+   $("#quote_box li:eq(" + opacityOff + ")")
+      .animate({"opacity" : "1"} ,1000)
+      .animate({"opacity" : "1"}, delay)
+      .animate({"opacity" : "0"}, 1000, function(){
+        (opacityOff == count) ? opacityOff=0 : opacityOff++;
+         eachDiv();
+      });
+   };
+   eachDiv();
 }); // closes ready
